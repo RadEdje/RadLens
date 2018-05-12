@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./public/css/styles.css">
+</head>
+
+<body>
+
+    <head>
+
+    </head>
+    <div>
+        <p> THIS HAS TO WORK</p>
+    </div>
+
+    <div id="container">
+        <video autoplay="true" id="videoElement">
+
+        </video>
+    </div>
+
+
+    <footer>
+
+
+        <!-- for webcam -->
+        <script>
+            var video = document.querySelector("#videoElement");
+
+            navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia ||
+                navigator.msGetUserMedia || navigator.oGetUserMedia;
+
+            if (navigator.getUserMedia) {
+                navigator.getUserMedia({
+                    video: true
+                }, handleVideo, videoError);
+            }
+
+            function handleVideo(stream) {
+                video.src = window.URL.createObjectURL(stream);
+            }
+
+            function videoError(e) {
+                alert("error");
+            }
+        </script>
+
+
+
+        <!-- for machine learning -->
+
+        <!-- for PARCEL -->
+        <script type="text/javascript" src="./index.js"></script>
+
+
+        <!-- for webpack -->
+        <!-- <script type="text/javascript" src="./public/js/bundle.js"></script> -->
+
+        <!-- <script type="text/javascript" src="./src/js/index.js"></script> -->
+
+
+    </footer>
+
+</body>
+
+</html>
