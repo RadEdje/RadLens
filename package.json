@@ -7,6 +7,8 @@
     "watch": "webpack --watch",
     "start": "webpack --watch & webpack-dev-server --open-page 'webpack-dev-server'",
     "parcel": "./node_modules/.bin/parcel index.html",
+    "parcelB": "./node_modules/.bin/parcel build index.js",
+    "parcelBhp": "./node_modules/.bin/parcel build index.html  --no-minify --output-dir pub",
     "buildwebpack": "webpack --config webpack.config.js",
     "buildBabel": "babel src -d public",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -28,6 +30,6 @@
   },
   "dependencies": {
     "@tensorflow/tfjs": "^0.10.3",
-    "@tensorflow/tfjs-converter": "^0.3.1"
+    "@tensorflow/tfjs-converter": "^0.2.1"
   }
 }

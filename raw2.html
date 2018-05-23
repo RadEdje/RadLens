@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RAW </title>
+    <link rel="stylesheet" href="./public/css/styles.css">
+
+
+
+    <!-- <script type="text/javascript" src="./tf/tfjs.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter@0.2.0"></script> -->
+
+
+</head>
+
+<body>
+    <!-- <img style="display: none" id="cat" src="high-detail.jpg" width="224" height="224"> -->
+
+    <div>
+        <p> THIS HAS TO WORK</p>
+    </div>
+
+    <div id="container">
+        <video autoplay="true" id="videoElement">
+
+        </video>
+
+        <img id="pic" src="./img/Z.jpg" alt="Smiley face" height="244" width="244">
+
+    </div>
+
+
+    <footer>
+
+        <!-- for webcam -->
+        <script>
+            var video = document.querySelector("#videoElement");
+
+            navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia ||
+                navigator.msGetUserMedia || navigator.oGetUserMedia;
+
+            if (navigator.getUserMedia) {
+                navigator.getUserMedia({
+                    video: true
+                }, handleVideo, videoError);
+            }
+
+            function handleVideo(stream) {
+                video.src = window.URL.createObjectURL(stream);
+            }
+
+            function videoError(e) {
+                alert("error");
+            }
+        </script>
+
+<script type="text/javascript" src="./index.js"></script>
+
+
+
+
+
+
+
+        <!-- <script>
+            // const MODEL_URL = './model/web_model.pb';
+
+            const MODEL_URL = './model/tensorflowjs_model.pb';
+            const WEIGHTS_URL = './model/weights_manifest.json';
+
+
+            // const MODEL_URL = 'https://storage-direct.y8.com/eddie/html5/canvas-friends/detail_js/tensorflowjs_model.pb';
+            // const WEIGHTS_URL = 'https://storage-direct.y8.com/eddie/html5/canvas-friends/detail_js/weights_manifest.json';
+
+            console.log('before loadFrozenModel')
+            async function loadModal() {
+                const model = await tf_converter.loadFrozenModel(MODEL_URL, WEIGHTS_URL);
+                console.log(model);
+
+            }
+            loadModal()
+
+
+
+            //const cat = document.getElementById('cat');
+            //model.execute({input: tf.fromPixels(cat)});
+
+
+            // let isPredictingm = true;
+
+            //THE LOOP FOR LOGGIN PREDICTIONS
+            // while (isPredicting) {
+            //     const predictedClass = tf.tidy(() => {
+            //         const img = webcam.capture();
+            //         //   const activation = mobilenet.predict(img);
+            //         //   const predictions = model.predict(activation);
+            //         const predictions = model.predict(img);
+            //         return predictions.as1D().argMax();
+
+            //     });
+
+            //     // console.log(predictedClass);
+
+            //     const classId = (await predictedClass.data())[0];
+
+            //     console.log(classId);
+            //     // ui.predictClass(classId);
+            //     await tf.nextFrame();
+
+            //     // console.log('while predicting after load');
+
+            // }
+        </script> -->
+
+
+    </footer>
+
+</body>
+
+</html>
