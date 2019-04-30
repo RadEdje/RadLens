@@ -1,4 +1,4 @@
-# radLense
+# radLens
 
 ##My first git project and
 ##it's for running a tensorflow model I trained in python that
