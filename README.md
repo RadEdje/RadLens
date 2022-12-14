@@ -1,6 +1,6 @@
 # radLens
 
-##UPDATE: please refrain from using this repo.... some of the code has not been updated in months and may have numerous issues... please check out my upcoming updated repo for RadLens-AI which let's you train your own CV AI models right on your phone using the power of tensorflow.js
+##UPDATE: please refrain from using this repo.... some of the code has not been updated in months and may have numerous issues... please check out my upcoming updated repo for RadLens-AI 3.0 which let's you train your own CV AI models right on your phone using the power of tensorflow.js
 
 ##My first git project and
 ##it's for running a tensorflow model I trained in python that
